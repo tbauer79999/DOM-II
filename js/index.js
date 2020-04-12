@@ -1,4 +1,9 @@
 // Your code goes here
+document.querySelector("a").addEventListener("click", function(event){
+    event.preventDefault()
+  });
+
+
 const newTitle = document.querySelector("h1");
 newTitle.textContent = "Fun Bus";
 
@@ -51,7 +56,7 @@ newPara.addEventListener('mouseover', function() {
 gsap.from("body", {duration: 2, opacity: 0, scale: 0.3, ease: "back"});
 
 // bottom Content
-let bottomContent = document.querySelector('.content-pick ');
+let bottomContent = document.querySelector('.content-pick');
 bottomContent.addEventListener('mouseover', function() {
     bottomContent.style.transform = "rotateY(360deg)";
     bottomContent.style.transition = "transform 1.5s ";
