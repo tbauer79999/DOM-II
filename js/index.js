@@ -26,9 +26,33 @@ newH2.addEventListener("wheel", event => {
 });
 
 
-// rotation!
+// rotation! on main image
 let intro = document.querySelector('.intro img');
 intro.addEventListener('mouseover', function() {
-    intro.style.transform = "rotateY(360deg)";
+    intro.style.transform = "rotateY(180deg)";
     intro.style.transition = "transform 1.5s ";
+})
+
+// rotation! on second image
+let secondIMG = document.querySelector('.img-content img');
+secondIMG.addEventListener('mouseover', function() {
+    secondIMG.style.transform = "rotateX(180deg)";
+    secondIMG.style.transition = "transform 1.5s ";
+})
+
+// first paragraph
+let newPara = document.querySelector('.intro p');
+newPara.addEventListener('mouseover', function() {
+    newPara.style.transform = "rotateX(360deg)";
+    newPara.style.transition = "transform 1.5s ";
+})
+
+// GSAP
+gsap.from("body", {duration: 2, opacity: 0, scale: 0.3, ease: "back"});
+
+// bottom Content
+let bottomContent = document.querySelector('.content-pick ');
+bottomContent.addEventListener('mouseover', function() {
+    bottomContent.style.transform = "rotateY(360deg)";
+    bottomContent.style.transition = "transform 1.5s ";
 })
